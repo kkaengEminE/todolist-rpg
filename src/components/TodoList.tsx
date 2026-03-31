@@ -90,11 +90,21 @@ export const TodoList: React.FC<TodoListProps> = ({
                 opacity: todo.completed ? 0.6 : 1
               }}
             >
-              <div style={{
-                flex: 1,
-                textDecoration: todo.completed ? 'line-through' : 'none'
-              }}>
-                {todo.text}
+              <div style={{ flex: 1 }}>
+                <div style={{
+                  textDecoration: todo.completed ? 'line-through' : 'none',
+                  fontSize: '16px',
+                  marginBottom: '4px'
+                }}>
+                  {todo.text}
+                </div>
+                <div style={{
+                  fontSize: '12px',
+                  color: '#95e1d3',
+                  opacity: 0.8
+                }}>
+                  {new Date(todo.createdAt).toLocaleString('ko-KR')}
+                </div>
               </div>
               <div style={{ display: 'flex', gap: '5px' }}>
                 {!todo.completed && (
