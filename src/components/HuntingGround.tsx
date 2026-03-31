@@ -110,8 +110,6 @@ export const HuntingGround: React.FC<HuntingGroundProps> = ({
     window.addEventListener('keydown', handleKeyDown);
 
     const gameLoop = () => {
-      const now = Date.now();
-
       // Spawn monsters
       if (gameState.monsters.length < 5 + gameState.wave) {
         if (Math.random() < 0.02) {
