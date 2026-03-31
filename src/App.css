@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Courier New', monospace;
+  background-color: #0f3460;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 20px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.right-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  background-color: rgba(22, 33, 62, 0.5);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.nav-button {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #1a1a2e;
+  transition: transform 0.2s, opacity 0.2s;
+  font-family: 'Courier New', monospace;
+}
+
+.nav-button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.nav-button:active {
+  transform: translateY(0);
+}
+
+input {
+  font-family: 'Courier New', monospace;
+}
+
+button {
+  font-family: 'Courier New', monospace;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f3460;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4ecdc4;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #95e1d3;
+}
+
+@media (max-width: 1200px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
