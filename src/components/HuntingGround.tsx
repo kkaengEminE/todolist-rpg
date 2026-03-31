@@ -37,7 +37,6 @@ export const HuntingGround: React.FC<HuntingGroundProps> = ({
 
     const gameState = gameStateRef.current;
     let animationId: number;
-    let lastTime = Date.now();
 
     const spawnMonster = () => {
       const side = Math.floor(Math.random() * 4);
@@ -112,7 +111,6 @@ export const HuntingGround: React.FC<HuntingGroundProps> = ({
 
     const gameLoop = () => {
       const now = Date.now();
-      lastTime = now;
 
       // Spawn monsters
       if (gameState.monsters.length < 5 + gameState.wave) {
