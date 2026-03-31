@@ -112,7 +112,6 @@ export const HuntingGround: React.FC<HuntingGroundProps> = ({
 
     const gameLoop = () => {
       const now = Date.now();
-      const dt = (now - lastTime) / 1000;
       lastTime = now;
 
       // Spawn monsters
