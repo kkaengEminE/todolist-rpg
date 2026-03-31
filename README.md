@@ -34,10 +34,13 @@ npm run dev
 ```
 개발 서버가 시작되면 터미널에 로컬 접속 주소(일반적으로 `http://localhost:5173`)가 표시됩니다. 해당 주소를 브라우저에 입력하여 앱을 사용할 수 있습니다.
 
-### 3. 프로덕션 빌드 및 배포
-이 프로젝트는 GitHub Pages를 통해 배포될 수 있도록 설정되어 있습니다. 아래 명령어를 실행하면, 프로덕션 빌드가 자동으로 선행된 후 `gh-pages` 브랜치로 파일들이 푸시되어 배포됩니다.
+### 3. 배포 (자동 배포)
+이 프로젝트는 GitHub Actions를 통해 `main` 브랜치에 코드가 푸시될 때마다 GitHub Pages로 자동 배포되도록 워크플로우(`/github/workflows/deploy.yml`)가 설정되어 있습니다.
 
 ```bash
-npm run deploy
+git push origin main
 ```
-배포가 완료되면 `https://cclss-9kiwoon.github.io/todolist-rpg/` 주소에서 라이브 데모를 확인할 수 있습니다.
+별도의 스크립트 없이 위와 같이 코드를 푸시하기만 하면 됩니다. 
+(배포가 반영되는 데는 약 1~2분이 소요될 수 있습니다.)
+
+배포가 완료되면 `https://cclss-9kiwoon.github.io/todolist-rpg/` 주소에서 최신 라이브 데모를 확인할 수 있습니다.
