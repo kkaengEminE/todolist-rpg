@@ -40,4 +40,4 @@ npm run dev
 ```bash
 npm run deploy
 ```
-배포가 완료되면 `https://cclss-9kiwoon.github.io/todo-rpg/` 주소에서 라이브 데모를 확인할 수 있습니다.
+배포가 완료되면 `https://cclss-9kiwoon.github.io/todolist-rpg/` 주소에서 라이브 데모를 확인할 수 있습니다.
